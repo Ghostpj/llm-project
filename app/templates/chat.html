@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat IA App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="zone_chat">
+        <!-- Historique des messages -->
+        <div id="historique_messages">
+            {% for msg in messages %}
+                {% if 'Fichier uploadé' in msg %}
+                    <div class="message received-message">{{ msg }}</div>
+                {% else %}
+                    <div class="message sent-message">{{ msg }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Zone de saisie et de téléchargement -->
+        <div id="saisie_message">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <input type="file" name="fichier" accept=".pdf,.txt">
+                <textarea name="message" placeholder="Tapez votre message ici..."></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
