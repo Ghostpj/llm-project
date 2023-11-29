@@ -2,69 +2,46 @@ from flask import render_template, request, redirect, url_for, flash
 from app import app
 from werkzeug.utils import secure_filename
 import os
+from .settings import *
+from .global_methods import *
+from langchain import HuggingFaceHub
+from langchain.document_loaders import PyPDFLoader, TextLoader
+from langchain.prompts import PromptTemplate
+from langchain.chains.summarize import load_summarize_chain
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langdetect import detect
+from langchain.chains import RetrievalQA
+from langchain.vectorstores import Qdrant
+from qdrant_client import QdrantClient
 
-global_messages = []
-
-
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-UPLOAD_FOLDER = os.path.join(BASE_DIR, 'uploads')
-ALLOWED_EXTENSIONS = {'pdf', 'txt', 'docx'}
-
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
-def allowed_file(filename):
-    """Cette fonction vérifie si le fichier a une extension autorisée."""
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
-from flask import render_template, request, redirect, url_for, flash
-from app import app
-from werkzeug.utils import secure_filename
-import os
-
-global_messages = []
-
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-UPLOAD_FOLDER = os.path.join(BASE_DIR, 'uploads')
-ALLOWED_EXTENSIONS = {'pdf', 'txt', 'docx'}
+messages = [{'a' : "Bonjour, comment puis-je vous aider ?"}]
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+#os.environ["OPENAI_API_KEY"] = "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"
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
-
-def determine_file_type(filename):
-    """
-    Déterminer le type de fichier en fonction de son extension
-    """
-    file_types = {
-        'pdf': "un fichier PDF",
-        'txt': "un texte",
-        'docx': "un document Word"
-    }
-
-    file_extension = filename.rsplit('.', 1)[1].lower()
-    return file_types.get(file_extension, "un fichier inconnu")
-
-
-def allowed_file(filename):
-    """Cette fonction vérifie si le fichier a une extension autorisée."""
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods = ['GET', 'POST'])
 def chat():
-    global global_messages
+
+    global messages
+
     if request.method == 'POST':
+
         # Récupère le message de l'utilisateur depuis le formulaire
-        message_content = request.form.get('message')
-        if message_content:
-            global_messages.append(message_content)  # Ajoute le message à la liste
+        question_content = request.form.get('message')
+        file = request.files.get('fichier')
+        if question_content and not file:
+
+            llm = HuggingFaceHub(repo_id = "mistralai/Mistral-7B-Instruct-v0.1")
+
+            messages.append({'q' : question_content, 'a' : llm(question_content)})  # Ajoute le message à la liste
 
         # Gestion du téléchargement des fichiers
-        file = request.files.get('fichier')
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)  # Assurez-vous que le nom de fichier est sûr
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
@@ -72,6 +49,54 @@ def chat():
 
             # Identifier et ajouter le type de fichier au message
             file_type_description = determine_file_type(filename)
-            global_messages.append(f"Fichier uploadé: {filename}, c'est {file_type_description}")
+            messages.append({'a' : f"Le fichier '{filename}' a été correctement téléchargé, c'est {file_type_description}."})
 
-    return render_template('chat.html', messages=global_messages)
+            # Text load
+            loader = TextLoader(file_path)
+            pages = loader.load()
+
+            if not question_content :
+                # LLM : french and english
+                try :
+                    language = detect(pages[0].page_content)
+                    if language == 'fr' :
+                        print('fr')
+                        llm = HuggingFaceHub(repo_id = "plguillou/t5-base-fr-sum-cnndm")
+                    elif language == 'en' :
+                        print('en')
+                        llm = HuggingFaceHub(repo_id = "Falconsai/medical_summarization")
+                    else :
+                        raise Exception
+                except :
+                    raise Exception
+
+                # Prompt
+                prompt_template = """Write a concise summary of the following text delimited by triple backquotes.
+                Return your response in bullet points which covers the key points of the text.
+                ```{text}```
+                BULLET POINT SUMMARY:
+                """
+                prompt = PromptTemplate.from_template(prompt_template)
+
+                # Stuff
+                stuff_chain = load_summarize_chain(llm, chain_type="stuff", prompt=prompt)
+                
+                messages.append({'a' : stuff_chain.run(pages)})
+
+            else :
+                messages.append({'q' : question_content})
+
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=0)
+                docs = text_splitter.split_documents(pages)
+                model_name = "sentence-transformers/all-mpnet-base-v2"
+                embeddings = HuggingFaceEmbeddings(model_name=model_name)
+                llm = HuggingFaceHub(repo_id = "mistralai/Mistral-7B-Instruct-v0.1")
+
+                vectordb = Qdrant.from_documents(documents=docs, embedding=embeddings, location=":memory:", 
+                                                prefer_grpc=True, collection_name="my_documents")
+                retriever = vectordb.as_retriever()
+                qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, verbose=True)
+
+                messages.append({'a' : qa.run(question_content)})
+
+    return render_template('chat.html', messages = messages)

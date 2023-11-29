@@ -1,0 +1,136 @@
+#titles {
+    padding: 2%;
+    text-align: center;
+    background-color: gainsboro;
+    margin-bottom: 0;
+}
+
+h1 {
+    color: black;
+    font-size: 25px;
+}
+
+#interaction {
+    padding: 2%;
+    text-align: center;
+    background-color: gainsboro;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#historique_messages {
+    padding: 2%;
+    text-align: center;
+    overflow: auto;
+    max-height: 420px;
+}
+
+.container {
+    width: 50%;
+    border: 3px solid gainsboro;
+    border-radius: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: white;
+    overflow: hidden;
+}
+
+#questions {
+    background-color: slategray;
+    text-align: right;
+    color: white;
+}
+
+#answers {
+    background-color: powderblue;
+    text-align: left;
+}
+
+#fileInput {
+    display: none;
+}
+
+.custom-button {
+    display: inline-block;
+    padding-left: 100%;
+    padding-right: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    vertical-align: top;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+/* Style the label to resemble a button */
+.custom-button-label {
+    display: inline-block;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Style the label when hovering to give visual feedback */
+.custom-button:hover {
+    background-color: gray;
+    color: white;
+}
+
+#user_chat {
+    text-align: right;
+}
+
+#ia_chat {
+    text-align: left;
+}
+
+.button_class {
+    display: inline-block;
+    width: fit-content;
+    color: black;
+    border-width: 0;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+#send_button {
+    width: fit-content;
+    background-color: white;
+    color: black;
+    border: none;
+    margin-bottom: 0;
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#send_button:hover {
+    background-color: gray;
+    color: white;
+}
+
+#text {
+    display: inline-block;
+    width: 85%;
+    height: 50px;
+    vertical-align: middle;
+    margin-left: 5%;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border: none;
+}

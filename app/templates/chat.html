@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chat IA App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Projet 5BIM App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_chat.css') }}">
+    <script src="https://kit.fontawesome.com/505382b98a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="zone_chat">
+    <main class="container">
+        <hgroup id="titles">
+            <h1>Scientific AI</h1>
+            <h2>Project 5BIM</h2>
+        </hgroup>
+
         <!-- Historique des messages -->
         <div id="historique_messages">
             {% for msg in messages %}
-                {% if 'Fichier uploadé' in msg %}
-                    <div class="message received-message">{{ msg }}</div>
-                {% else %}
-                    <div class="message sent-message">{{ msg }}</div>
+                {% if 'q' in msg %}
+                    <div id="user_chat">
+                        <button id="questions" class="button_class">{{ msg['q'] }}</button>
+                        <br>
+                    </div>
+                {% endif %}
+                {% if 'a' in msg %}
+                    <div id="ia_chat">
+                        <button id="answers" class="button_class">{{ msg['a'] }}</button>
+                        <br>
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>
-
+    
         <!-- Zone de saisie et de téléchargement -->
-        <div id="saisie_message">
-            <form action="/" method="POST" enctype="multipart/form-data">
-                <input type="file" name="fichier" accept=".pdf,.txt">
-                <textarea name="message" placeholder="Tapez votre message ici..."></textarea>
-                <input type="submit" value="Envoyer">
-            </form>
-        </div>
-    </div>
+        <form action="/" method="POST" enctype="multipart/form-data" id="interaction">
+            <label for="fileInput" class="custom-button-label">
+                <span class="custom-button"><i class="fa-regular fa-file"></i></span>
+                <input type="file" name="fichier" accept=".pdf,.txt" id="fileInput">
+            </label>
+            <textarea id="text" name="message" placeholder="Tapez votre message ici..."></textarea>
+            <input type="submit" value="Envoyer" id="send_button">
+        </form>
+    </main>
 </body>
 </html>
