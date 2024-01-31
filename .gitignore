@@ -1,0 +1,5 @@
+# Ignore the file load
+./uploads/*
+
+# Ignore the local LLM
+./local_llm/*

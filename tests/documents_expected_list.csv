@@ -1,0 +1,46 @@
+Test number,Document type ,Document,Type of Query,Query,Expected
+1,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a concise answer below 100 words.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed.
+Machine learning applications: Image Recognition, Speech Recognition, etc.
+Types of Machine Learning: supervised Learning, unsupervised Learning, reinforcement Learning.
+Machine Learning Workflow: train and iterate, integrate models into applications."
+2,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed.
+Diverse applications in various fields.
+Types of Machine Learning: supervised Learning (known inputs/outputs), unsupervised Learning (no known outputs), reinforcement Learning (maximize reward).
+Machine Learning Workflow: iterative training, model integration for predictions, importance of avoiding training on test data."
+3,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a long and complete answer.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed
+Wide-ranging applications.
+ML Types: supervised learning: known in/out pairs, unsupervised learning: no known outputs, detects patterns, reinforcement learning: maximize rewards through actions.
+ML Workflow: iterative training for optimal models, integrate models for predictions.
+Key Concepts: loss functions, data partitioning, validation sets.
+Feature Engineering: mapping raw data to features, techniques for numerical and categorical values.
+ML Algorithms: overview of classification, regression, clustering.
+Evaluation Metrics: metrics for classification and regression, ROC curves and AUC for classification.
+Application: cancerous cell detection, image preprocessing, feature extraction, model training/testing for classification.
+Deep Learning: perceptrons, MLPs, and evolution to CNNs."
+4,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Easy question,What is the difference between supervised and unsupervised learning ?,"Supervised Learning: Involves known input/output pairs. For example, classifying emails as spam or not spam.
+Unsupervised Learning: No known outputs; focuses on finding patterns. An example is clustering customer data to identify distinct groups."
+5,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Difficult question,What are the disadvantages of feature crosses in machine learning?,The course material does not contain the information
+6,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a concise answer below 100 words.,"Context : glyphosate's definition, primary use
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms."
+7,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"Context : glyphosate's definition, primary use, glyphosate's chemical properties
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms.
+Details on the accumulation of glyphosate in soil, water, and plant products.
+The effect of glyphosate on microbial communities and its potential role in antibiotic resistance."
+8,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a long and complete answer.,"Context : glyphosate's definition, primary use, glyphosate's chemical properties
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms.
+Details on the accumulation of glyphosate in soil, water, and plant products.
+The effect of glyphosate on microbial communities and its potential role in antibiotic resistance.
+Specific impacts on different organisms including terrestrial and aquatic animals, and microorganisms.
+Discussion of the method of action of glyphosate and its degradation products.
+The controversial nature of glyphosate's safety and its classification as a potential carcinogen."
+9,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Easy question,Can you name one way glyphosate affects plant health?,"Glyphosate affects plant health by inhibiting the production of aromatic amino acids, leading to reduced plant resistance to pathogens and increased susceptibility to infection. It also affects photosynthesis and can cause yellowing and necrosis of foliage.(Section 3.1: Effects on plants)"
+10,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Difficult question,How does glyphosate potentially contribute to antibiotic resistance?,"Glyphosate may contribute to antibiotic resistance by exerting selective pressure on microbial communities, leading to shifts in composition that favor antibiotic-resistant bacteria. This is due to its widespread use and accumulation in the environment. (Section 4: Resistance to glyphosate and antibiotics)"

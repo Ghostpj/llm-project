@@ -1,0 +1,347 @@
+Page 1:
+1Image Processing 
+Machine Learning in Image Processing 
+Page 2:
+What is machine learning? 
+2
+Arthur Samuel (1959): 
+ “Machine learning is a field of study that gives 
+computers the ability to learn without being 
+explicitly programmed” 
+Page 3:
+Machine learning is everywhere 
+3•Image Recognition 
+•Speech Recognition 
+•Stock Prediction 
+•Medical Diagnosis 
+•Data Analytics 
+•Robotics 
+•And More …
+
+Page 4:
+4ML basics 
+Page 5:
+Types of machine learning 
+5Supervised Learning 
+Training data has known inputs and outputs 
+-task example: classification, regression 
+from https://dev.to/petercour/machine-learning-classification-vs-regression-1gn 
+
+Page 6:
+Types of machine learning 
+6Unsupervised Learning 
+Training data only has inputs (no known output) 
+-task example: clustering 
+-try to discover inherent properties of the data 
+
+Page 7:
+Types of machine learning 
+7Reinforcement Learning 
+Program takes actions given an environment to maximize the reward 
+-example: 
+-(video) games: Alpha Go 
+-robotics 
+
+Page 8:
+Machine Learning Workflow 
+8•Train : Iterate till you find the best model 
+•Predict : Integrate trained models into applications 
+
+Page 9:
+Loss functions 
+9●How well algorithms model the data 
+-low for good prediction 
+-high for bad prediction 
+●Monitored during the training process 
+●Example: 
+○Mean squared error 
+With: 
+-N : number of predictions 
+-yi : reference value 
+-ŷi : predicted value 
+Page 10:
+Partitioning Data Sets 
+10
+•Divide into two sets: 
+•training set 
+•test set 
+•Recurrent mistake: do not train on test data 
+•Getting surprisingly low loss? 
+•Before celebrating, check if you're accidentally 
+training on test data 
+Page 11:
+Partitioning Data Sets 
+11•Possible workflow 
+
+Page 12:
+Partitioning Data Sets 
+12•Generalization on new data? 
+
+Page 13:
+Partitioning Data Sets 
+13
+•Better workflow: use validation dataset 
+
+Page 14:
+From raw data to features 
+14Goal: Map each part of the vector on the left into one or more fields into the 
+feature vector on the right. 
+
+Page 15:
+From raw data to features 
+15Mapping numerical values 
+
+Page 16:
+From raw data to features 
+16Mapping categorical values 
+
+Page 17:
+Feature Crosses 
+17•A feature cross is a synthetic feature formed by combining two or more  
+features 
+•Crossing combinations of features can provide predictive abilities  
+beyond what those features can provide individually. 
+?
+Data linearly separable 
+Page 18:
+Feature Crosses 
+18•We can multiply two input features  [A x B] 
+•Can be complex: [A x B x C x D x E] 
+•When A and B represent boolean features, such as bins, the resulting  
+crosses can be extremely sparse 
+
+Page 19:
+Feature Crosses 
+19Why should we do this? 
+Linear learners use linear models → scale well to massive data 
+But without feature crosses, the expressivity of these models would  be 
+limited 
+Using feature crosses + massive data is one efficient strategy for  learning 
+highly complex models 
+Page 20:
+20ML algorithms 
+Page 21:
+Classification 
+21●In practice, the model outputs a probability ⇒ a threshold  value is set to get a 
+discrete classification 
+Classification 
+Algorithm normal 
+pneumonia 
+xlabel y ●Supervised  algorithm 
+●Goal: Given an observation x, give its class y ∊ {1,...,N} 
+●Binary or multi-class 
+Page 22:
+Classification: KNN 
+22●K-Nearest Neighbor algorithm: 
+○non-linear function 
+○no training required 
+●Algorithm: 
+1)choose K number of neighbors 
+2)for each new sample: compute 
+distance with every data sample 
+3)take the K nearest neighbors 
+4)apply majority voting 
+
+Page 23:
+Classification: KNN 
+23Advantages: 
+-Simple implementation 
+-No training required 
+Drawbacks: 
+-Choice of K (prefer an odd value)? 
+-Computation time for big data set: computing 
+the distance to all data points 
+-Sensitive to noise 
+
+Page 24:
+Regression 
+24●Supervised  algorithm 
+●Goal: Given a feature vector x, predict its corresponding continuous output value y 
+●Example: given the number of rooms in a house, predict the price of the house 
+Page 25:
+Regression: linear case 
+25●1-D case: y is a linear function  of input feature x 
+y = w.x + b 
+●N-D case: y is a linear combination  of N input features x1 , . . . , xN :
+y = w1x1 + w2x2 + … + wNxN + w0y = 2.03 x - 5.00 
+Page 26:
+Regression: non-linear case 
+26●y is a non-linear function  of input feature x 
+●Example: polynomial regression: 
+f(x) = w0 + w1x + w2x2 + w3x3 + … + wpxp 
+= [w0  w1  w2  w3  …  wp]  [1   x   x2  x3 …  xp ]T
+= wT Φ(x) which is a linear function 
+⇒ we can apply linear regression on the new feature vector 
+
+Page 27:
+Clustering 
+27●Unsupervised  ML algorithm: groups data points into clusters based on their 
+similarity 
+●Example: K-means algorithm 
+○Choice of K ? 
+Original  
+image K-means on  
+gray levels K-means on  
+colors 
+K-means algorithm for image segmentation 
+Page 28:
+28Evaluation of ML 
+algorithms 
+Page 29:
+Evaluation metrics 
+29●How do we evaluate models? 
+●Depends on the task: classification? regression ? segmentation? 
+Page 30:
+Evaluation metrics: classification 
+30●Accuracy:  
+○how many items were correctly predicted 
+○acc = (TP + TN) / (TP + FP + TN + FN) 
+○In many cases, accuracy is a poor or misleading 
+metric.  Typical case includes class imbalance , 
+when positives or negatives are  extremely rare 
+
+Page 31:
+Evaluation metrics: classification 
+31●Precision:  
+○When model said "positive" class, was it right? 
+○precision = TP / (TP + FP) 
+●Recall : 
+○Out of all the possible positives, how many did the 
+model correctly identify? 
+○recall = TP / (TP + FN) 
+
+Page 32:
+Evaluation metrics: classification 
+32●ROC  curve (receiver operating characteristic curve) 
+○graph showing the performance of a 
+classification model at all classification 
+thresholds. 
+
+Page 33:
+Evaluation metrics: classification 
+33●AUC : "Area under the ROC Curve" 
+○Interpretation: If we pick a random positive and a 
+random negative, what's the probability my model 
+ranks them in the correct order? 
+For example: AUC = 0.8 => there is a 80% chance that 
+the model will be able to distinguish between positive 
+class and negative class 
+○Intuition: gives an aggregate measure of performance 
+across all possible classification thresholds 
+○better classification when the higher the ROC = the 
+higher the value of AUC 
+
+Page 34:
+Evaluation metrics: regression 
+34●Mean Squared Error 
+○MSE = 0 when all values are correctly predicted 
+●Root mean squared error, mean absolute error,... 
+
+Page 35:
+35Example 
+Cancerous cell detection 
+Page 36:
+Example: cancerous cell detection 
+36●Task: classification 
+●Approach: 
+○Extract features from raw images 
+○Train and compare classifiers 
+○Test results on new image data 
+normal 
+cancerous Machine 
+Learning 
+•Data : microscopy images with marking (DAPI) 
+Page 37:
+Example: cancerous cell detection 
+37●Step 1: pre-processing 
+○Improve image quality (transformation, filters) 
+○Extract semantic content (segmentation, contours) 
+○Correct this content (mathematical morphology) 
+○And then ??? 
+Original 
+image 
+Normalize 
+Otsu threshold 
+Dilate 
+Page 38:
+Example: cancerous cell detection 
+38●Step 2: Feature extraction: extract each cell 
+●Idea: Connected Components: 
+○A connected component , or an object, in a binary image is a set of adjacent pixels. 
+○4-connectivity —Two adjoining pixels are part of the same object if they are both on 
+and are connected along the horizontal or vertical direction 
+○8-connectivity —Two adjoining pixels are part of the same object if they are both on 
+and are connected along the horizontal, vertical, or diagonal direction 
+
+Page 39:
+Example: cancerous cell detection 
+39●Step 2: Feature extraction: labelling connected components 
+●Idea: Identify the CC in an image and assigning each one a unique  label 
+
+Page 40:
+Example: cancerous cell detection 
+40●Step 2: Feature extraction: compute descriptors 
+●Shape measurements from CC: 
+○Area, Perimeter 
+○Bounding Box 
+○Centroid 
+○Circularity: (4*Area* π)/(Perimeter²) 
+○Eccentricity 
+○Extent 
+○Extremas 
+○Major or minor axis length 
+○Orientation 
+
+Page 41:
+Example: cancerous cell detection 
+41●Step 2: Feature extraction: compute descriptors 
+●Pixel value measurements from CC: 
+○Max, min intensity 
+○Mean intensity 
+○Pixel Values 
+○Weighted Centroid 
+Page 42:
+Example: cancerous cell detection 
+42●Step 3: Choose and train model 
+○Supervised? Unsupervised? 
+○Choose specific model 
+Page 43:
+43Deep Learning 
+Page 44:
+Deep Learning 
+44●Perceptron : 
+○artificial neuron 
+○Steps: 
+■apply a weight w to the input 
+■sum and threshold to get the output 
+
+Page 45:
+Deep Learning 
+45●Perceptron : 
+○During training weights are learned = their value is modified to optimize the 
+prediction (= minimize the loss function) 
+○Type of model: linear classifier 
+
+Page 46:
+Deep Learning 
+46●Multi-layered perceptron (MLP) 
+○add hidden layers between input and output neurons 
+○can model complex non-linear functions 
+
+Page 47:
+Deep Learning 
+47●MLP and image inputs 
+●Problem: this ignores the spatial relationship between pixels 
+○group of neighbouring pixels correspond to visual structures 
+Page 48:
+Deep Learning 
+48●Convolutional Neural Networks (CNN) 
+○use convolution layers (+ pooling and activation layers) 
+○during the training process, the convolution kernels are learned 
+https://fr.mathworks.com/videos/introduction-to-deep-learning-what-are-convolutional-neural-networks--1489512765771.html 
+Page 49:
+Additional readings 
+49●Andrew Ng Machine Learning and Deep Learning course: 
+https://www.youtube.com/c/Deeplearningai  
+●Ian Goodfellow deep learning book: https://www.deeplearningbook.org/  
+●CNRS FIDLE course (in french): https://www.youtube.com/@CNRS-FIDLE  
