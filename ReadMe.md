@@ -6,11 +6,14 @@ Firstly, in order to run the project, please run the following commands into a c
 
 Then, a local server is launched and you just have to open the HTTP adress specified in the terminal in a web browser.
 
-In the project's git folder, you will find the following components:
+In the project's git folder, you will find the following components :
 
 * An "app" directory for the interface.
-* Local Large Language Model (LLM).
-* Test scripts.
+* Local Large Language Model (LLM) folder.
+* Test scripts folder.
+* `.gitignore`: Specifies which files and directories should be excluded from version control, such as the file load or local LLM.
+* `requirements.txt`: Lists all required packages and their versions necessary for the project.
+* `run.py`: Run this Python file to launch the web application.
 
 ## `app` Directory
 
@@ -79,6 +82,4 @@ Files in the `tests` Directory:
 - `run_test.py`: Generates all test files, and the methodology is described in an accompanying document called "Analyses_tests_conclusion."
 - `global_methods.py`: Used in run_test.py, described previously.
 - `settings.py`: Used in run_test.py, described previously.
-- `.gitignore`: Specifies which files and directories should be excluded from version control, such as the file load or local LLM.
-- `requirements.txt`: Lists all required packages and their versions necessary for the project.
-- `run.py`: Run this Python file to launch the web application.
+- `rapport_tests.docx`: A complete report of the analysis of the resulsts of the tests.
