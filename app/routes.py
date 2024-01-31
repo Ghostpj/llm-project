@@ -50,7 +50,7 @@ def chat():
         # API solution
         if BOOL_API :
             os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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" #HuggingFace key
-            llm = HuggingFaceHub(repo_id = "mistralai/Mistral-7B-v0.1")
+            llm = HuggingFaceHub(repo_id = LLM_NAME)
 
         # Local solution : loads the LLM locally if not already loaded in the "locl_llm" folder
         else :
@@ -58,8 +58,8 @@ def chat():
                 model = AutoModelForCausalLM.from_pretrained(LLM_FOLDER)
                 tokenizer = AutoTokenizer.from_pretrained(LLM_FOLDER)
             else :
-                model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-v0.1")
-                tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
+                model = AutoModelForCausalLM.from_pretrained(LLM_NAME)
+                tokenizer = AutoTokenizer.from_pretrained(LLM_NAME)
                 model.save_pretrained(LLM_FOLDER)
                 tokenizer.save_pretrained(LLM_FOLDER)
 
@@ -146,7 +146,7 @@ def chat():
             splitted_texts = text_splitter.split_documents(texts)
 
             # Embeddings
-            embeddings = HuggingFaceEmbeddings(model_name = "sentence-transformers/all-mpnet-base-v2")
+            embeddings = HuggingFaceEmbeddings(model_name = EMBEDDINGS_NAME)
 
             # Vectorstores
             vectorstore = Qdrant.from_documents(splitted_texts, embeddings, location = ":memory:")
