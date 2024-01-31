@@ -21,14 +21,11 @@ from global_methods import *
 # Initialize BERTScorer
 scorer = BERTScorer(model_type='bert-base-uncased')
 
-# Path to the folder containing .xlsx files of each test
-folder_path = "/home/cbreant/Documents/5BIM/projet5BIM/llm-project/app/All_files_by_test"  
-
 # List to store results
 score_results = []
 
 # API's
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = ""
 
 # LLM load
 llm = HuggingFaceHub(repo_id = "mistralai/Mistral-7B-v0.1")
