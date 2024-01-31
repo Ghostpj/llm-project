@@ -1,3 +1,4 @@
+/* Title styles */
 #titles {
     padding: 2%;
     text-align: center;
@@ -10,21 +11,7 @@ h1 {
     font-size: 25px;
 }
 
-#interaction {
-    padding: 2%;
-    text-align: center;
-    background-color: gainsboro;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#historique_messages {
-    padding: 2%;
-    text-align: center;
-    overflow: auto;
-    max-height: 420px;
-}
-
+/* Global container */
 .container {
     width: 50%;
     border: 3px solid gainsboro;
@@ -37,53 +24,27 @@ h1 {
     overflow: hidden;
 }
 
+/* Bottom part for the interaction between the user and the app */
+#interaction {
+    padding: 2%;
+    text-align: center;
+    background-color: gainsboro;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Message part */
+#history_messages {
+    padding: 2%;
+    text-align: center;
+    overflow: auto;
+    max-height: 420px;
+}
+
+/* User messages */
 #questions {
     background-color: slategray;
     text-align: right;
-    color: white;
-}
-
-#answers {
-    background-color: powderblue;
-    text-align: left;
-}
-
-#fileInput {
-    display: none;
-}
-
-.custom-button {
-    display: inline-block;
-    padding-left: 100%;
-    padding-right: 100%;
-    padding-top: 50%;
-    padding-bottom: 50%;
-    vertical-align: top;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: fit-content;
-    white-space: nowrap;
-    vertical-align: bottom;
-}
-
-/* Style the label to resemble a button */
-.custom-button-label {
-    display: inline-block;
-    padding: 0;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-/* Style the label when hovering to give visual feedback */
-.custom-button:hover {
-    background-color: gray;
     color: white;
 }
 
@@ -91,10 +52,17 @@ h1 {
     text-align: right;
 }
 
+/* Interface answers */
+#answers {
+    background-color: powderblue;
+    text-align: left;
+}
+
 #ia_chat {
     text-align: left;
 }
 
+/* Message buttons */
 .button_class {
     display: inline-block;
     width: fit-content;
@@ -104,8 +72,115 @@ h1 {
     pointer-events: none;
 }
 
+/* Upload part */
+#upload_section {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin-right: 1%;
+    text-align: center;
+}
+
+/* Article upload */
+#fileInputArticle {
+    display: none;
+}
+
+/* Lesson upload */
+#fileInputLesson {
+    display: none;
+}
+
+/* Label for uploads */
+p {
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* Upload buttons */
+.custom-button {
+    display: inline-block;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    vertical-align: middle;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* Style the upload label to resemble a button */
+.custom-button-label {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 30%;
+}
+
+/* Style the label when hovering to give visual feedback */
+.custom-button:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+/* Summary part */
+#summary_section {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    margin-right: 1%;
+}
+
+/* Summary buttons */
+#summary_button {
+    width: 80%;
+    background-color: white;
+    color: black;
+    border: none;
+    margin-bottom: 5%;
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-weight: bold;
+}
+
+#summary_button:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+/* Question part */
+#question_section {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+#text {
+    display: inline-block;
+    width: 95%;
+    vertical-align: middle;
+    margin-left: 5%;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+/* Question button */
 #send_button {
-    width: fit-content;
+    width: 30%;
     background-color: white;
     color: black;
     border: none;
@@ -119,18 +194,6 @@ h1 {
 }
 
 #send_button:hover {
-    background-color: gray;
+    background-color: lightgray;
     color: white;
-}
-
-#text {
-    display: inline-block;
-    width: 85%;
-    height: 50px;
-    vertical-align: middle;
-    margin-left: 5%;
-    font-size: 14px;
-    background-color: white;
-    color: black;
-    border: none;
 }

@@ -1,2 +1,12 @@
-Flask==2.2.5
-Werkzeug==3.0.1
+# PACKAGES required for the interface
+
+flask
+werkzeug
+langchain
+os
+transformers
+bert_score
+csv
+re
+nltk
+pandas
