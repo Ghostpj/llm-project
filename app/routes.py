@@ -49,7 +49,7 @@ def chat():
 
         # API solution
         if BOOL_API :
-            os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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" #HuggingFace key
+            os.environ["HUGGINGFACEHUB_API_TOKEN"] = "" #HuggingFace key
             llm = HuggingFaceHub(repo_id = LLM_NAME)
 
         # Local solution : loads the LLM locally if not already loaded in the "locl_llm" folder
