@@ -1,7 +1,7 @@
 # Interface Architecture & Functionality
 
 Firstly, in order to run the project, please run the following commands into a command line :
-* pip install -r requirements.txt (in order to install all the necessary packages)
+* pip3 install -r requirements.txt (in order to install all the necessary packages)
 * python3 run.py (in order to launch the app)
 
 Then, a local server is launched and you just have to open the HTTP adress specified in the terminal in a web browser.
