@@ -1,0 +1,66 @@
+Test number,Document type ,Document,Type of Query,Query,Expected
+1,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a concise answer below 100 words.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed.
+Machine learning applications: Image Recognition, Speech Recognition, etc.
+Types of Machine Learning: supervised Learning, unsupervised Learning, reinforcement Learning.
+Machine Learning Workflow: train and iterate, integrate models into applications."
+2,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed.
+Diverse applications in various fields.
+Types of Machine Learning: supervised Learning (known inputs/outputs), unsupervised Learning (no known outputs), reinforcement Learning (maximize reward).
+Machine Learning Workflow: iterative training, model integration for predictions, importance of avoiding training on test data."
+3,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Summary,Please summarize the text in a long and complete answer.,"Definition : Machine learning gives computers the ability to learn without being
+explicitly programmed
+Wide-ranging applications.
+ML Types: supervised learning: known in/out pairs, unsupervised learning: no known outputs, detects patterns, reinforcement learning: maximize rewards through actions.
+ML Workflow: iterative training for optimal models, integrate models for predictions.
+Key Concepts: loss functions, data partitioning, validation sets.
+Feature Engineering: mapping raw data to features, techniques for numerical and categorical values.
+ML Algorithms: overview of classification, regression, clustering.
+Evaluation Metrics: metrics for classification and regression, ROC curves and AUC for classification.
+Application: cancerous cell detection, image preprocessing, feature extraction, model training/testing for classification.
+Deep Learning: perceptrons, MLPs, and evolution to CNNs."
+4,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Easy question,What is the difference between supervised and unsupervised learning ?,"Supervised Learning: Involves known input/output pairs. For example, classifying emails as spam or not spam.
+Unsupervised Learning: No known outputs; focuses on finding patterns. An example is clustering customer data to identify distinct groups."
+5,Course material,BS-5-COIMAGE_lecture5_cours_.txt,Difficult question,What are the disadvantages of feature crosses in machine learning?,The course material does not contain the information
+6,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a concise answer below 100 words.,"Context : glyphosate's definition, primary use
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms."
+7,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"Context : glyphosate's definition, primary use, glyphosate's chemical properties
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms.
+Details on the accumulation of glyphosate in soil, water, and plant products.
+The effect of glyphosate on microbial communities and its potential role in antibiotic resistance."
+8,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Summary,Please summarize the text in a long and complete answer.,"Context : glyphosate's definition, primary use, glyphosate's chemical properties
+The widespread use of glyphosate and its accumulation in the environment.
+The potential health risks for plants, animals, and humans.
+The increase in glyphosate-resistant weeds and microorganisms.
+Details on the accumulation of glyphosate in soil, water, and plant products.
+The effect of glyphosate on microbial communities and its potential role in antibiotic resistance.
+Specific impacts on different organisms including terrestrial and aquatic animals, and microorganisms.
+Discussion of the method of action of glyphosate and its degradation products.
+The controversial nature of glyphosate's safety and its classification as a potential carcinogen."
+9,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Easy question,Can you name one way glyphosate affects plant health?,"Glyphosate affects plant health by inhibiting the production of aromatic amino acids, leading to reduced plant resistance to pathogens and increased susceptibility to infection. It also affects photosynthesis and can cause yellowing and necrosis of foliage.(Section 3.1: Effects on plants)"
+10,Article,Environmental-and-health-effects-of-the-herbicide-glyphosate.txt,Difficult question,How does glyphosate potentially contribute to antibiotic resistance?,"Glyphosate may contribute to antibiotic resistance by exerting selective pressure on microbial communities, leading to shifts in composition that favor antibiotic-resistant bacteria. This is due to its widespread use and accumulation in the environment. (Section 4: Resistance to glyphosate and antibiotics)"
+11,Article,Procollagen-C-proteinase-enhancer-1.txt,Summary,Please summarize the text in a concise answer below 100 words.,Procollagen C-proteinase enhancer-1 (PCPE-1) is a potential biomarker and therapeutic target for fibrosis (excessive collagen deposition and tissue scarring). PCPE-1 uniquely enhances the maturation of procollagen by BMP-1/tolloid-like proteinases (BTPs). Role in collagen fibrillogenesis. The overexpression of PCPE-1 is recognized as a general feature and early marker of fibrosis.
+12,Article,Procollagen-C-proteinase-enhancer-1.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"A proper balance between collagen synthesis and degradation is crucial for health, impacting everything from development to wound healing. Fibrosis, characterized by abnormal collagen accumulation, disrupts this balance, leading to organ dysfunction. PCPE-1 uniquely enhances the maturation of procollagen by BMP-1/tolloid-like proteinases (BTPs). Role in collagen fibrillogenesis.  The overexpression of PCPE-1 is recognized as a general feature and early marker of fibrosis.  Despite the promising data, challenges remain in validating PCPE-1's clinical utility, necessitating more comprehensive studies to establish a definitive link between PCPE-1 levels and fibrosis severity, for developing targeted therapies."
+13,Article,Procollagen-C-proteinase-enhancer-1.txt,Summary,Please summarize the text in a long and complete answer.,"A proper balance between collagen synthesis and degradation is crucial for health, impacting everything from development to wound healing. Fibrosis, characterized by abnormal collagen accumulation, disrupts this balance, leading to organ dysfunction. PCPE-1 uniquely enhances the maturation of procollagen by BMP-1/tolloid-like proteinases (BTPs). Role in collagen fibrillogenesis.   PCPE-1 expression is induced in various fibrotic conditions, including heart, liver, and kidney fibrosis, underscoring its potential as a systemic marker of fibrosis so it is recognized as a general feature and early marker of fibrosis.  Despite the promising data, challenges remain in validating PCPE-1's clinical utility, necessitating more comprehensive studies to establish a definitive link between PCPE-1 levels and fibrosis severity, for developing targeted therapies and drug design, with the potential to specifically disrupt the fibrotic process without interfering with other vital physiological functions."
+14,Article,Procollagen-C-proteinase-enhancer-1.txt,Easy question,"Based on the article, why is PCPE-1 considered a potential biomarker for diagnosing fibrosis?","PCPE-1 is consistently overexpressed in various fibrotic conditions, correlating with disease severity. PCPE-1 specifically enhances procollagen maturation by BMP-1/tolloid-like proteinases (BTPs), distinguishing it from general tissue remodeling markers. PCPE-1's elevation in early stages of fibrosis suggests its potential for early diagnosis and intervention."
+15,Article,Procollagen-C-proteinase-enhancer-1.txt,Difficult question,Describe in detail how PCPE-1 enhances the maturation of procollagen by BMP-1/tolloid-like proteinases (BTPs). What is the significance of this process in the context of fibrosis?,"PCPE-1 enhances the maturation of procollagen by specifically stimulating the removal of C-propeptides (CP) from fibrillar procollagens I, II, and III by BMP-1/tolloid-like proteinases (BTPs). It achieves this by binding with nanomolar affinity to procollagen molecules, increasing the catalytic efficiency of BMP-1 significantly. This specific action of PCPE-1 on procollagen maturation is crucial in fibrosis, as it contributes to the regulated formation of collagen fibrils. "
+16,Course material,CM_Proteomique_INSA-19sept2023.txt,Summary,Please summarize the text in a concise answer below 100 words.,"Proteomics: Analyzes entire protein sets. Mass Spectrometry (MS): Central technique for protein analysis. Workflow: Involves sample preparation, MS analysis, and data interpretation."
+17,Course material,CM_Proteomique_INSA-19sept2023.txt,Summary,Please summarize the text in a concise answer between 100 and 200 words.,"Proteomics: Analyzes entire protein sets. Mass Spectrometry (MS): Central technique for protein analysis. Workflow: Involves sample preparation, MS analysis, and data interpretation.
+MS Techniques: Includes MALDI-TOF, ESI for spectral analysis.
+Sample Preparation: Critical steps like digestion, ionization.
+Data Analysis: Requires bioinformatics for meaningful insights."
+18,Course material,CM_Proteomique_INSA-19sept2023.txt,Summary,Please summarize the text in a long and complete answer.,"Proteomics: In-depth study of protein functions and interactions.
+Workflow: Integrates sample preparation, MS techniques (MALDI-TOF, ESI), and data analysis.
+Sample Preparation: Involves specific steps ensuring MS compatibility.
+MS Analysis: Detailed protein identification and quantification.
+Bioinformatics: Transforms complex data into biological insights.
+Applications: Extensive, including health and environmental sciences."
+19,Course material,CM_Proteomique_INSA-19sept2023.txt,Easy question,Can you explain the basic principle of mass spectrometry and its role in proteomics?,"Mass spectrometry (MS) is a technique that measures the mass-to-charge ratio of ions.
+Role in Proteomics: It identifies and quantifies proteins, essential for understanding biological structures and functions."
+20,Course material,CM_Proteomique_INSA-19sept2023.txt,Difficult question,"How does the choice of ionization technique impact the analysis of proteomic samples, and what factors would influence your choice of bioinformatics tools for data analysis?","Ionization Technique Impact: Influences the quality of MS data (e.g., sensitivity, resolution).
+Factors for Tool Choice: Include data complexity, required analytical depth, and specific research objectives."

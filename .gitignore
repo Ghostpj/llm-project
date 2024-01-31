@@ -1,0 +1,6 @@
+# Ignore the file load
+./uploads/processed/*
+./uploads/unprocessed/*
+
+# Ignore the local LLM
+./local_llm/*

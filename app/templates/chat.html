@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Global parameters -->
 <head>
-    <title>Chat IA App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Projet 5BIM App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_chat.css') }}">
+    <script src="https://kit.fontawesome.com/505382b98a.js" crossorigin="anonymous"></script>
 </head>
+
+<!-- Interface code -->
 <body>
-    <div id="zone_chat">
-        <!-- Historique des messages -->
-        <div id="historique_messages">
+    <main class="container">
+
+        <!-- Title -->
+        <hgroup id="titles">
+            <h1>Scientific AI</h1>
+            <h2>Project 5BIM</h2>
+        </hgroup>
+
+        <!-- Message (questions and answers) area -->
+        <div id="history_messages">
             {% for msg in messages %}
-                {% if 'Fichier uploadé' in msg %}
-                    <div class="message received-message">{{ msg }}</div>
-                {% else %}
-                    <div class="message sent-message">{{ msg }}</div>
+                {% if 'q' in msg %}
+                    <div id="user_chat">
+                        <button id="questions" class="button_class">{{ msg['q'] }}</button>
+                        <br>
+                    </div>
+                {% endif %}
+                {% if 'a' in msg %}
+                    <div id="ia_chat">
+                        <button id="answers" class="button_class">{{ msg['a'] }}</button>
+                        <br>
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>
-
-        <!-- Zone de saisie et de téléchargement -->
-        <div id="saisie_message">
-            <form action="/" method="POST" enctype="multipart/form-data">
-                <input type="file" name="fichier" accept=".pdf,.txt">
-                <textarea name="message" placeholder="Tapez votre message ici..."></textarea>
-                <input type="submit" value="Envoyer">
-            </form>
-        </div>
-    </div>
+    
+        <!-- Area of interactions -->
+        <form action="/" method="POST" enctype="multipart/form-data" id="interaction">
+            
+            <!-- Upload part -->
+            <div id="upload_section">
+                <h6>Upload</h6>
+                <label for="fileInputArticle" class="custom-button-label">
+                    <span class="custom-button"><i class="fa-regular fa-newspaper"></i></span>
+                    <input type="file" name="file_article" accept=".pdf,.txt" id="fileInputArticle">
+                </label>
+                <p>Article</p>
+                <label for="fileInputLesson" class="custom-button-label">
+                    <span class="custom-button"><i class="fa-solid fa-person-chalkboard"></i></span>
+                    <input type="file" name="file_lesson" accept=".pdf,.txt" id="fileInputLesson">
+                </label>
+                <p>Lesson</p>
+            </div>
+            
+            <!-- Summary part -->
+            <div id="summary_section">
+                <h6>Summary</h6>
+                <input type="submit" value="Short" id="summary_button" name="summary_button">
+                <input type="submit" value="Medium" id="summary_button" name="summary_button">
+                <input type="submit" value="Long" id="summary_button" name="summary_button">
+            </div>
+            
+            <!-- Question part -->
+            <div id="question_section">
+                <h6>Question</h6>
+                <textarea id="text" name="message" placeholder="Ask your question here..."></textarea>
+                <input type="submit" value="Send" id="send_button" name="send_button">
+            </div>
+            
+        </form>
+    </main>
 </body>
+
 </html>
