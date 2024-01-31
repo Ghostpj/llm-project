@@ -4,6 +4,8 @@ Firstly, in order to run the project, please run the following commands into a c
 * pip3 install -r requirements.txt (in order to install all the necessary packages)
 * python3 run.py (in order to launch the app)
 
+Also, please be careful to enter your HuggingFace API Key if you want to run the app with the API way.
+
 Then, a local server is launched and you just have to open the HTTP adress specified in the terminal in a web browser.
 
 In the project's git folder, you will find the following components :
