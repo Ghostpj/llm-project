@@ -1,0 +1,61 @@
+,splitter,vectorstore,chunk_size,chunk_overlap,result,precision,recall,f1_score
+0,recursive,chroma,10,0,"The text is about the functions of computers.The first function is to store information. Computers can store a lot of information, such as text, images, videos, and music.The second function is to process information. Computers can process information quickly and accurately. They can also perform complex calculations and analyze data.The third function is to communicate. Computers can communicate with other computers and with people. They can send and receive information over the internet.",0.5274209976196289,0.4666588008403778,0.4951828718185425
+1,recursive,chroma,50,0,"The text is about the functions of computers.The first function is to store information. Computers can store a lot of information, such as text, images, videos, and music.The second function is to process information. Computers can process information quickly and accurately. They can also perform complex calculations and analyze data.The third function is to communicate. Computers can communicate with other computers and with people. They can send and receive information over the internet.",0.5274209976196289,0.4666588008403778,0.4951828718185425
+2,recursive,chroma,50,10,"The text is about the drawbacks of computers.The first drawback is that computers are not perfect. They can make mistakes, and they can be hacked.The second drawback is that computers are not always reliable. They can crash, and they can lose data.The third drawback is that computers are not always easy to use. They can be complicated, and they can be difficult to learn.The fourth drawback is that computers are",0.45574459433555603,0.42142927646636963,0.43791571259498596
+3,recursive,chroma,100,0,"The text is about the drawbacks of computers.The first drawback is that computers are not perfect. They can make mistakes, and they can be hacked.The second drawback is that computers are not always reliable. They can crash, and they can lose data.The third drawback is that computers are not always easy to use. They can be complicated, and they can be difficult to learn.The fourth drawback is that computers are",0.45574459433555603,0.42142927646636963,0.43791571259498596
+4,recursive,chroma,100,10,"The text is about the drawbacks of computers.The first drawback is that computers are not perfect. They can make mistakes, and they can be hacked.The second drawback is that computers are not always reliable. They can crash, and they can lose data.The third drawback is that computers are not always easy to use. They can be complicated, and they can be difficult to learn.The fourth drawback is that computers are",0.45574459433555603,0.42142927646636963,0.43791571259498596
+5,recursive,chroma,100,50,"The text is about the history of machine learning. It starts by explaining that machine learning is a field of study that gives computers the ability to learn without being explicitly programmed. The text then goes on to discuss the work of Arthur Samuel, who is credited with being the first person to use the term ""machine learning"" in 1959. Samuel was a pioneer in the field of computer chess, and he used machine learning techniques to teach his computer to play che",0.4847021996974945,0.42221730947494507,0.4513072371482849
+6,recursive,chroma,500,0,"The text is about the history of machine learning. It starts by explaining that machine learning is a field of study that gives computers the ability to learn without being explicitly programmed. The text then goes on to discuss the work of Arthur Samuel, who is credited with being the first person to use the term ""machine learning"" in 1959. Samuel was a pioneer in the field of computer chess, and he used machine learning techniques to teach his computer to play che",0.4847021996974945,0.42221730947494507,0.4513072371482849
+7,recursive,chroma,500,10,,0.0,0.0,0.0
+8,recursive,chroma,500,50,,0.0,0.0,0.0
+9,recursive,chroma,500,100,,0.0,0.0,0.0
+10,recursive,chroma,1000,0,,0.0,0.0,0.0
+11,recursive,chroma,1000,10,,0.0,0.0,0.0
+12,recursive,chroma,1000,50,,0.0,0.0,0.0
+13,recursive,chroma,1000,100,,0.0,0.0,0.0
+14,recursive,chroma,1000,500,,0.0,0.0,0.0
+15,recursive,qdrant,10,0,"The text is about the drawbacks of computers.The first drawback is that computers are not perfect. They can make mistakes. For example, they can give wrong answers to mathematical problems.The second drawback is that computers can be hacked. This means that someone can access your computer and steal your information.The third drawback is that computers can be slow. This means that they can take a long time to do something.The fourth draw",0.46025219559669495,0.41715008020401,0.4376424252986908
+16,recursive,qdrant,50,0,"The text is about the advantages and disadvantages of linear learners and KNN.Linear learners are simple to implement and train, but they are not very accurate. They are also not very robust to noise and outliers.KNN is a more accurate and robust method, but it is more complex to implement and train. It is also more sensitive to noise and outliers.The text also mentions that KNN is more accurate than",0.46702349185943604,0.43449118733406067,0.4501703679561615
+17,recursive,qdrant,50,10,,0.0,0.0,0.0
+18,recursive,qdrant,100,0,,0.0,0.0,0.0
+19,recursive,qdrant,100,10,"The text is about the use of linear models in machine learning. Linear models are simple and easy to implement, but they can be trained on large datasets without the need for feature crosses. Feature crosses are a common problem in machine learning, where the number of features can quickly become very large and complex. Linear models can handle this complexity without the need for feature crosses, making them a good choice for large datasets.The text also discusses the advantages and disadv",0.4991490840911865,0.4618906080722809,0.4797976315021515
+20,recursive,qdrant,100,50,,0.0,0.0,0.0
+21,recursive,qdrant,500,0,"The text is about the history of machine learning and its applications in various fields such as image recognition, speech recognition, stock prediction, medical diagnosis, data analytics, and robotics. The text also discusses the basics of machine learning, including supervised learning, unsupervised learning, and reinforcement learning. It also provides examples of machine learning algorithms such as linear regression, logistic regression, decision trees, and support vector machines. The text also discusses the evaluation metrics",0.6236333847045898,0.5478412508964539,0.5832855105400085
+22,recursive,qdrant,500,10,,0.0,0.0,0.0
+23,recursive,qdrant,500,50,,0.0,0.0,0.0
+24,recursive,qdrant,500,100,,0.0,0.0,0.0
+25,recursive,qdrant,1000,0,,0.0,0.0,0.0
+26,recursive,qdrant,1000,10,,0.0,0.0,0.0
+27,recursive,qdrant,1000,50,,0.0,0.0,0.0
+28,recursive,qdrant,1000,100,,0.0,0.0,0.0
+29,recursive,qdrant,1000,500,,0.0,0.0,0.0
+30,token,chroma,10,0,,0.0,0.0,0.0
+31,token,chroma,50,0,,0.0,0.0,0.0
+32,token,chroma,50,10,,0.0,0.0,0.0
+33,token,chroma,100,0,,0.0,0.0,0.0
+34,token,chroma,100,10,,0.0,0.0,0.0
+35,token,chroma,100,50,,0.0,0.0,0.0
+36,token,chroma,500,0,,0.0,0.0,0.0
+37,token,chroma,500,10,,0.0,0.0,0.0
+38,token,chroma,500,50,,0.0,0.0,0.0
+39,token,chroma,500,100,,0.0,0.0,0.0
+40,token,chroma,1000,0,,0.0,0.0,0.0
+41,token,chroma,1000,10,,0.0,0.0,0.0
+42,token,chroma,1000,50,,0.0,0.0,0.0
+43,token,chroma,1000,100,,0.0,0.0,0.0
+44,token,chroma,1000,500,,0.0,0.0,0.0
+45,token,qdrant,10,0,"The study gives computers the ability to learn without explicitly programmed.The study is based on the fact that computers can learn without being explicitly programmed. This is done by using a technique called ""deep learning"". Deep learning is a type of machine learning that uses artificial neural networks to learn from data.The study shows that deep learning can be used to learn from data without being explicitly programmed. This is done by using a technique called ""deep learning"". Deep learning is",0.5897602438926697,0.46547260880470276,0.5202969908714294
+46,token,qdrant,50,0,,0.0,0.0,0.0
+47,token,qdrant,50,10,,0.0,0.0,0.0
+48,token,qdrant,100,0,,0.0,0.0,0.0
+49,token,qdrant,100,10,,0.0,0.0,0.0
+50,token,qdrant,100,50,,0.0,0.0,0.0
+51,token,qdrant,500,0,,0.0,0.0,0.0
+52,token,qdrant,500,10,,0.0,0.0,0.0
+53,token,qdrant,500,50,,0.0,0.0,0.0
+54,token,qdrant,500,100,,0.0,0.0,0.0
+55,token,qdrant,1000,0,,0.0,0.0,0.0
+56,token,qdrant,1000,10,,0.0,0.0,0.0
+57,token,qdrant,1000,50,,0.0,0.0,0.0
+58,token,qdrant,1000,100,,0.0,0.0,0.0
+59,token,qdrant,1000,500,,0.0,0.0,0.0

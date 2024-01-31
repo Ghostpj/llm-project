@@ -1,0 +1,61 @@
+,splitter,vectorstore,chunk_size,chunk_overlap,result,precision,recall,f1_score
+0,recursive,chroma,10,0,"The text is about the basics of computing. It explains that computing is the process of using computers to solve problems. It also explains that computers are machines that can perform calculations and store information. The text also explains that computers can be used for a variety of tasks, such as word processing, spreadsheets, and databases.The text also explains that computers can be used for a variety of tasks, such as word processing, spreadsheets, and databases. It",0.507686972618103,0.5207567811012268,0.5141388177871704
+1,recursive,chroma,50,0,"The text is about the drawbacks of computers.The author says that computers are not perfect and that they have some drawbacks.First, he says that computers are not perfect and that they can make mistakes.Second, he says that computers can be slow and that they can take a long time to do things.Third, he says that computers can be expensive and that they can be difficult to use.Finally, he says that",0.445524662733078,0.4304918050765991,0.4378792643547058
+2,recursive,chroma,50,10,The text is about the study of computers and their ability to learn without human intervention. The study is based on the idea that computers can learn from their own experiences and interactions with the world around them. The study suggests that computers can learn without human intervention by using algorithms and machine learning techniques. The study also suggests that computers can learn from their own experiences and interactions with the world around them. The study suggests that computers can learn without human intervention by using algorithms and machine learning techniques. The study,0.5099877119064331,0.5177631974220276,0.5138460397720337
+3,recursive,chroma,100,0,,0.0,0.0,0.0
+4,recursive,chroma,100,10,,0.0,0.0,0.0
+5,recursive,chroma,100,50,,0.0,0.0,0.0
+6,recursive,chroma,500,0,,0.0,0.0,0.0
+7,recursive,chroma,500,10,,0.0,0.0,0.0
+8,recursive,chroma,500,50,,0.0,0.0,0.0
+9,recursive,chroma,500,100,,0.0,0.0,0.0
+10,recursive,chroma,1000,0,,0.0,0.0,0.0
+11,recursive,chroma,1000,10,,0.0,0.0,0.0
+12,recursive,chroma,1000,50,,0.0,0.0,0.0
+13,recursive,chroma,1000,100,,0.0,0.0,0.0
+14,recursive,chroma,1000,500,,0.0,0.0,0.0
+15,recursive,qdrant,10,0,"The text is about the drawbacks of computers.The author says that computers are not perfect and that they have some drawbacks.First, he says that computers are not perfect and that they can make mistakes.Second, he says that computers can be slow and that they can take a long time to do things.Third, he says that computers can be expensive and that they can be difficult to use.Finally, he says that",0.445524662733078,0.4304918050765991,0.4378792643547058
+16,recursive,qdrant,50,0,"The text is about the advantages and disadvantages of linear learners and KNN.Linear learners are simple and fast to implement, but they are not very accurate. They are also not very robust to noise.KNN is more accurate than linear learners, but it is slower to implement and requires more training data. It is also more sensitive to noise.The text also mentions that KNN is more accurate than linear learners, but it",0.43831971287727356,0.4466591775417328,0.4424501359462738
+17,recursive,qdrant,50,10,,0.0,0.0,0.0
+18,recursive,qdrant,100,0,,0.0,0.0,0.0
+19,recursive,qdrant,100,10,,0.0,0.0,0.0
+20,recursive,qdrant,100,50,"The text is about the history of machine learning. It starts with the work of Arthur Samuel in 1959, who developed a program that could learn to play checkers. The program was able to improve its performance over time by analyzing its own mistakes and adjusting its strategy accordingly.The text then discusses the importance of data partitioning in machine learning. It explains that data is often divided into training, validation, and test sets, with the training set used",0.48041844367980957,0.5301218628883362,0.5040478110313416
+21,recursive,qdrant,500,0,"The text is about the different types of machine learning and their applications. The first type is supervised learning, which is used to train a model with known inputs and outputs. The second type is unsupervised learning, which is used to find patterns in data without any labels. The third type is reinforcement learning, which is used to train a model to make decisions based on rewards and punishments. The fourth type is deep learning, which is used to train a model with multiple",0.5395848751068115,0.6223125457763672,0.5780035853385925
+22,recursive,qdrant,500,10,,0.0,0.0,0.0
+23,recursive,qdrant,500,50,"Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.Machine learning is used in a wide range of applications, including image recognition, speech recognition, natural language processing, and predictive analytics. It is used in many industries, including healthcare, finance, retail, and manufacturing.Machine",0.6128155589103699,0.6697329878807068,0.6400113105773926
+24,recursive,qdrant,500,100,,0.0,0.0,0.0
+25,recursive,qdrant,1000,0,,0.0,0.0,0.0
+26,recursive,qdrant,1000,10,,0.0,0.0,0.0
+27,recursive,qdrant,1000,50,,0.0,0.0,0.0
+28,recursive,qdrant,1000,100,,0.0,0.0,0.0
+29,recursive,qdrant,1000,500,,0.0,0.0,0.0
+30,token,chroma,10,0,,0.0,0.0,0.0
+31,token,chroma,50,0,,0.0,0.0,0.0
+32,token,chroma,50,10,,0.0,0.0,0.0
+33,token,chroma,100,0,,0.0,0.0,0.0
+34,token,chroma,100,10,,0.0,0.0,0.0
+35,token,chroma,100,50,,0.0,0.0,0.0
+36,token,chroma,500,0,,0.0,0.0,0.0
+37,token,chroma,500,10,,0.0,0.0,0.0
+38,token,chroma,500,50,,0.0,0.0,0.0
+39,token,chroma,500,100,,0.0,0.0,0.0
+40,token,chroma,1000,0,,0.0,0.0,0.0
+41,token,chroma,1000,10,,0.0,0.0,0.0
+42,token,chroma,1000,50,,0.0,0.0,0.0
+43,token,chroma,1000,100,,0.0,0.0,0.0
+44,token,chroma,1000,500,,0.0,0.0,0.0
+45,token,qdrant,10,0,"The text is about the machine learning field. It is a field of computer science that gives computers the ability to learn without being explicitly programmed. The text explains that machine learning is a subfield of artificial intelligence that focuses on the development of algorithms that can learn from data and improve their performance over time. The text also discusses the different types of machine learning algorithms, including supervised learning, unsupervised learning, and reinforcement learning. The text also discusses the applications of machine",0.6247717142105103,0.7241359353065491,0.6707940697669983
+46,token,qdrant,50,0,,0.0,0.0,0.0
+47,token,qdrant,50,10,,0.0,0.0,0.0
+48,token,qdrant,100,0,,0.0,0.0,0.0
+49,token,qdrant,100,10,,0.0,0.0,0.0
+50,token,qdrant,100,50,,0.0,0.0,0.0
+51,token,qdrant,500,0,,0.0,0.0,0.0
+52,token,qdrant,500,10,,0.0,0.0,0.0
+53,token,qdrant,500,50,,0.0,0.0,0.0
+54,token,qdrant,500,100,,0.0,0.0,0.0
+55,token,qdrant,1000,0,,0.0,0.0,0.0
+56,token,qdrant,1000,10,,0.0,0.0,0.0
+57,token,qdrant,1000,50,,0.0,0.0,0.0
+58,token,qdrant,1000,100,,0.0,0.0,0.0
+59,token,qdrant,1000,500,,0.0,0.0,0.0
