@@ -18,5 +18,7 @@ BOOL_API = True
 
 # LLM load and location
 BOOL_LLM = True
-LLM_FOLDER = "local_llm/mistralai/Mistral-7B-v0.1"
-EMBEDDINGS_FOLDER = "local_llm/sentence-transformers/all-mpnet-base-v2"
+LLM_NAME = "mistralai/Mistral-7B-v0.1"
+LLM_FOLDER = "local_llm/"+LLM_NAME
+EMBEDDINGS_NAME = "sentence-transformers/all-mpnet-base-v2"
+EMBEDDINGS_FOLDER = "local_llm/"+EMBEDDINGS_NAME
